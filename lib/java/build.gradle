@@ -25,9 +25,12 @@ buildscript {
     }
 
     repositories {
-        mavenCentral()
-        google()
-        gradlePluginPortal()
+        mavenLocal()
+        maven {
+            name "ArtifactoryRepo"
+            // see gradle.properties
+            url artifactoryUrl
+        }
     }
 
     dependencies {
